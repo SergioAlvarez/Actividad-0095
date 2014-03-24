@@ -23,6 +23,7 @@ public class Responder
         respuestas.add("No te entiendo");
         respuestas.add("¿Qué sistema operativo usas?");
         respuestas.add("¿Estás seguro?");
+        respuestas.add("Estamos trabajando en ello");
     }   
 
     /**
@@ -31,7 +32,7 @@ public class Responder
      */
     public String generateResponse()
     {
-        int numeroDevolver = aleatorio.nextInt(5);
+        int numeroDevolver = aleatorio.nextInt(respuestas.size());
         return respuestas.get(numeroDevolver);
     }
 }
