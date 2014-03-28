@@ -28,9 +28,11 @@ public class InputReader
      */
     public String getInput()
     {
+        String[] guardaRespuestas;
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
-
-        return inputLine;
+        guardaRespuestas = inputLine.split(" ");
+        String prueba = guardaRespuestas[0];
+        return  prueba;
     }
 }

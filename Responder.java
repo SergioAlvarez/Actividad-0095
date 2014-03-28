@@ -47,7 +47,6 @@ public class Responder
         {
             respuesta = respuestas.get(aleatorio.nextInt(respuestas.size()));
         }
-        int numeroDevolver = aleatorio.nextInt(respuestas.size());
         return respuesta;
     }
 }
