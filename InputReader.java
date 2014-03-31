@@ -26,13 +26,16 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet<String> getInput()
     {
-        String[] guardaRespuestas;
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
-        guardaRespuestas = inputLine.split(" ");
-        String prueba = guardaRespuestas[0];
-        return  prueba;
+        HashSet<String> guardaRespuestas  = new HashSet<>();
+        String[] arrayString  = inputLine.split(",");
+        for(int i = 0; i < arrayString.length; i++ )
+        {
+            guardaRespuestas.add(arrayString[i]);
+        }
+        return guardaRespuestas;
     }
 }
