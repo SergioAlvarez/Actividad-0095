@@ -11,12 +11,14 @@ import java.util.Scanner;
 public class InputReader
 {
     private Scanner reader;
+    HashSet<String> guardaRespuestas;
 
     /**
      * Create a new InputReader that reads text from the text terminal.
      */
     public InputReader()
     {
+        guardaRespuestas = new HashSet<>();
         reader = new Scanner(System.in);
     }
 
@@ -30,7 +32,6 @@ public class InputReader
     {
         System.out.print("> ");         // print prompt
         String inputLine = reader.nextLine();
-        HashSet<String> guardaRespuestas  = new HashSet<>();
         String[] arrayString  = inputLine.split(",");
         for(int i = 0; i < arrayString.length; i++ )
         {
